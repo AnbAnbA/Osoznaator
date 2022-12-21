@@ -7,107 +7,164 @@
     tools:context=".UpdateData">
 
     <EditText
-        android:id="@+id/etName"
+        android:id="@+id/Cel"
         android:layout_width="0dp"
         android:layout_height="50dp"
         android:layout_marginStart="30dp"
+        android:layout_marginTop="25dp"
         android:layout_marginEnd="30dp"
         android:gravity="start|top"
-        android:hint="@string/NameFilm"
+        android:hint="Укажите цель дня"
         android:inputType="textMultiLine"
-        app:layout_constraintBottom_toTopOf="@+id/etCountry"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imgPhoto" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/etCountry"
+        android:id="@+id/DRazum"
         android:layout_width="0dp"
         android:layout_height="50dp"
         android:layout_marginStart="30dp"
+        android:layout_marginTop="15dp"
         android:layout_marginEnd="30dp"
         android:gravity="start|top"
-        android:hint="@string/Country"
+        android:hint="вам холодно ли жарко?"
+
         android:inputType="textMultiLine"
-        app:layout_constraintBottom_toTopOf="@+id/etYear"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etName" />
+        app:layout_constraintTop_toBottomOf="@+id/Cel" />
 
     <EditText
-        android:id="@+id/etYear"
+        android:id="@+id/Prostr"
         android:layout_width="0dp"
         android:layout_height="50dp"
         android:layout_marginStart="30dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="30dp"
+        android:gravity="start|top"
+        android:hint="как пространственно вы находитесь?"
+
+        android:inputType="textMultiLine"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/DRazum" />
+
+    <EditText
+        android:id="@+id/Ocenkaemotion"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="15dp"
         android:layout_marginEnd="30dp"
         android:ems="10"
-        android:hint="@string/Release"
+        android:hint="ваше состояние от 1 до 10"
         android:inputType="numberDecimal"
-        app:layout_constraintBottom_toTopOf="@+id/btnAddData"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etCountry" />
+        app:layout_constraintTop_toBottomOf="@+id/Prostr" />
+
+    <EditText
+        android:id="@+id/Emotion"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="30dp"
+        android:ems="10"
+        android:hint="Какие эмоции вы испытываете?"
+        android:inputType="textMultiLine"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Ocenkaemotion" />
+
+    <EditText
+        android:id="@+id/Doi"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="30dp"
+        android:ems="10"
+        android:hint="Что вы сейчас делаете?"
+        android:inputType="textMultiLine"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Emotion" />
+
+    <EditText
+        android:id="@+id/Think"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="30dp"
+        android:ems="10"
+        android:hint="О чем вы сейчас думаете?"
+        android:inputType="textMultiLine"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Doi" />
+
+    <EditText
+        android:id="@+id/Time"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="30dp"
+        android:ems="10"
+        android:hint="Дата"
+        android:inputType="textMultiLine"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Think" />
 
     <android.widget.Button
         android:id="@+id/btnAddData"
         android:layout_width="150dp"
         android:layout_height="wrap_content"
-        android:background="@drawable/btn_background"
+        android:layout_marginBottom="20dp"
+        android:background="@color/teal_700"
         android:onClick="Update"
-        android:text="@string/ButtonUpdate"
+        android:text="Обновить"
         android:textColor="@color/white"
         app:layout_constraintBottom_toTopOf="@+id/btnDelete"
         app:layout_constraintEnd_toStartOf="@+id/btnBack"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etYear" />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <android.widget.Button
         android:id="@+id/btnBack"
         android:layout_width="110dp"
         android:layout_height="wrap_content"
-        android:background="@drawable/btn_background"
+        android:layout_marginBottom="20dp"
+        android:background="@color/teal_700"
         android:onClick="GoViewData"
-        android:text="@string/Back"
+        android:text="Назад"
         android:textColor="@color/white"
         app:layout_constraintBottom_toTopOf="@+id/btnDelete"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/btnAddData"
-        app:layout_constraintTop_toBottomOf="@+id/etYear" />
-
-    <TextView
-        android:id="@+id/txtHeader"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fontFamily="sans-serif"
-        android:text="@string/UpdateData"
-        android:textColor="@color/black"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/imgPhoto"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintStart_toEndOf="@+id/btnAddData" />
 
     <android.widget.Button
         android:id="@+id/btnDelete"
         android:layout_width="180dp"
         android:layout_height="wrap_content"
-        android:background="@drawable/btn_background"
+        android:layout_marginBottom="25dp"
+        android:background="@color/teal_700"
         android:onClick="Delete"
-        android:text="@string/Delete"
+        android:text="Удалить"
         android:textColor="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnAddData" />
+        app:layout_constraintStart_toStartOf="parent" />
 
-    <ImageView
-        android:id="@+id/imgPhoto"
-        android:layout_width="130dp"
-        android:layout_height="130dp"
-        android:onClick="SelectPhoto"
-        app:layout_constraintBottom_toTopOf="@+id/etName"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtHeader" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
